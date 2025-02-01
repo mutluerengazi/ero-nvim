@@ -25,6 +25,7 @@ return {
 			{ "<leader>w", group = "[W]orkspace" },
 			{ "<leader>t", group = "[T]oggle" },
 			{ "<leader>b", group = "[B]uffer" },
+			{ "<leader>n", group = "[N]eoTree" },
 			{ "<leader>bn", ":bnext<CR>", desc = "Next buffer" },
 			{ "<leader>bp", ":bprevious<CR>", desc = "Previous buffer" },
 			{ "<leader>b[", ":bfirst<CR>", desc = "First buffer" },
@@ -32,13 +33,6 @@ return {
 			{ "<leader>bd", ":bdelete<CR>", desc = "Delete buffer" },
 			{ "<leader>bf", ":bfirst<CR>", desc = "First buffer" },
 			{ "<leader>bl", ":blast<CR>", desc = "Last buffer" },
-			{
-				-- Nested mappings are allowed and can be added in any order
-				-- Most attributes can be inherited or overridden on any level
-				-- There's no limit to the depth of nesting
-				mode = { "n", "v" }, -- NORMAL and VISUAL mode
-				{ "<leader>w", "<cmd>w<cr>", desc = "Write" },
-			},
 		})
 	end,
 }
