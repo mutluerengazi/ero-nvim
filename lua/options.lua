@@ -17,7 +17,6 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.inccommand = "split"
-vim.opt.guicursor = ""
 vim.opt.cursorline = true
 vim.opt.scrolloff = 3
 vim.opt.wrap = false
