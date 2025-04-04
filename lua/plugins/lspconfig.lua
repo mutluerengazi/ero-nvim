@@ -16,6 +16,7 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			{ "j-hui/fidget.nvim", opts = {} },
+			-- Add blink.cmp as a dependency to ensure it's loaded first
 			"saghen/blink.cmp",
 		},
 		config = function()
@@ -75,8 +76,9 @@ return {
 					end
 				end,
 			})
-			-- Use blink.cmp's get_lsp_capabilities function
-			local capabilities = require('blink.cmp').get_lsp_capabilities()
+			
+			-- With Neovim 0.11+, we don't need to manually set up LSP capabilities for blink.cmp
+			-- The built-in LSP capabilities will be automatically extended
 
 			local servers = {
 				clangd = {},
@@ -102,7 +104,7 @@ return {
 				handlers = {
 					function(server_name)
 						local server = servers[server_name] or {}
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+						-- No need to manually set capabilities for Neovim 0.11+
 						require("lspconfig")[server_name].setup(server)
 					end,
 				},
