@@ -21,3 +21,4 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 3
 vim.opt.wrap = false
 vim.opt.hlsearch = true
+vim.opt.guicursor = ""
