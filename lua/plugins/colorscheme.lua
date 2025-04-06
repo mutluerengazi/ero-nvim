@@ -1,8 +1,8 @@
 return {
-	"rose-pine/neovim",
+	"shaunsingh/nord.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme("rose-pine-moon")
+		vim.cmd.colorscheme("nord")
 	end,
 }
