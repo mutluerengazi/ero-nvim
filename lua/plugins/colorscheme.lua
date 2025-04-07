@@ -1,8 +1,8 @@
 return {
-	"shaunsingh/nord.nvim",
+	"rebelot/kanagawa.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme("nord")
+		vim.cmd.colorscheme("kanagawa-dragon")
 	end,
 }
