@@ -16,9 +16,9 @@ vim.keymap.set("n", "<leader>b]", ":blast<CR>", { desc = "Last buffer" })
 vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete buffer" }) -- [[ Basic Autocommands ]]
 vim.keymap.set("n", "<leader>bD", ":%bd<CR>", { desc = "Delete all buffers" })
 vim.api.nvim_create_autocmd("TextYankPost", {
-	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
