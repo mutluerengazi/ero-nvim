@@ -1,9 +1,5 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
--- QuickFix navigation using Alt/Option+j/k
--- Requires Ghostty config: macos-option-as-alt = true
--- And keybinds: opt+j=text:\u001bj, opt+k=text:\u001bk
 vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>', { desc = 'QuickFix: next' })
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<CR>', { desc = 'QuickFix: previous' })
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
@@ -28,3 +24,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
+vim.keymap.set("n", "-", "<cmd>Oil<CR>")
