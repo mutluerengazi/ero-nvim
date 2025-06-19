@@ -1,8 +1,18 @@
 return {
-  "rebelot/kanagawa.nvim",
+  "ellisonleao/gruvbox.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme('kanagawa')
+    require("gruvbox").setup({
+      italic = {
+        strings = false,
+        emphasis = false,
+        comments = false,
+        operators = false,
+        folds = false,
+      },
+    })
+    vim.cmd.colorscheme('gruvbox')
+    vim.o.background = "dark"
   end
 }
