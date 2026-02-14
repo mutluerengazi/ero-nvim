@@ -1,11 +1,13 @@
+-- lua/plugins/rose-pine.lua
 return {
-  'sainnhe/gruvbox-material',
-  lazy = false,
-  priority = 1000,
+  "rose-pine/neovim",
+  name = "rose-pine",
   config = function()
-    -- Optionally configure and load the colorscheme
-    -- directly inside the plugin declaration.
-    vim.g.gruvbox_material_enable_italic = false
-    vim.cmd.colorscheme('gruvbox-material')
+    require("rose-pine").setup({
+      styles = {
+        italic = false,
+      },
+    })
+    vim.cmd("colorscheme rose-pine-moon")
   end
 }

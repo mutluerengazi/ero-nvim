@@ -3,5 +3,5 @@ return {
   lazy = false,
 
   -- Completion for `blink.cmp`
-  -- dependencies = { "saghen/blink.cmp" },
+  dependencies = { "saghen/blink.cmp" },
 }

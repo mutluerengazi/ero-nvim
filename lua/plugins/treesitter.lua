@@ -1,19 +1,21 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "main",
+  lazy = false,
   build = ":TSUpdate",
-  main = "nvim-treesitter.configs",
-  opts = {
-    ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc", "rust", "go" },
-    auto_install = true,
-    highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = { "ruby" },
-    },
-    indent = { enable = true, disable = { "ruby" } },
-  },
-  config = function(_, opts)
-    require("nvim-treesitter.install").prefer_git = true
-    ---@diagnostic disable-next-line: missing-fields
-    require("nvim-treesitter.configs").setup(opts)
+  config = function()
+    -- Parsers to install
+    local filetypes = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "markdown_inline", "vim", "vimdoc", "rust", "go" }
+    
+    -- Install parsers
+    require('nvim-treesitter').install(filetypes)
+    
+    -- Enable treesitter highlighting for these filetypes
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = filetypes,
+      callback = function()
+        vim.treesitter.start()
+      end,
+    })
   end,
 }
