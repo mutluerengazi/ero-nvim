@@ -1,13 +1,8 @@
 -- lua/plugins/rose-pine.lua
 return {
-  "folke/tokyonight.nvim",
-  name = "tokyonight",
+  "rose-pine/neovim",
+  name = "rose-pine",
   config = function()
-    require("tokyonight").setup({
-      styles = {
-        italic = false,
-      },
-    })
-    vim.cmd("colorscheme tokyonight-moon")
+    vim.cmd("colorscheme rose-pine-moon")
   end
 }
