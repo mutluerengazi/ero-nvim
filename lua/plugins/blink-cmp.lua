@@ -28,7 +28,7 @@ return {
       },
 
       -- (Default) Only show the documentation popup when manually triggered
-      completion = { documentation = { auto_show = false } },
+      completion = { documentation = { auto_show = false, auto_show_delay_ms = 500 } },
 
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
@@ -41,7 +41,7 @@ return {
       -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
       --
       -- See the fuzzy documentation for more information
-      fuzzy = { implementation = "prefer_rust_with_warning" },
+      fuzzy = { implementation = "prefer_rust" },
 
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },

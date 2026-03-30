@@ -1,10 +1,9 @@
 -- lua/plugins/rose-pine.lua
 return {
-  'sainnhe/gruvbox-material',
+  "Mofiqul/dracula.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.g.gruvbox_material_enable_italic = false
-    vim.cmd.colorscheme('gruvbox-material')
+    vim.cmd.colorscheme('dracula')
   end
 }
